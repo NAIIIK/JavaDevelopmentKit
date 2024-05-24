@@ -46,7 +46,6 @@ public class ClientGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 String login = loginField.getText();
-                String password = new String(passwdField.getPassword());
                 String ip = ipField.getText();
                 String port = portField.getText();
 
