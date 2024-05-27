@@ -11,6 +11,7 @@ public class ClientController {
 
     public ClientController(ServerController server) {
         this.server = server;
+        connected = false;
     }
 
     public void setClientView(ClientView clientView) {
@@ -35,6 +36,8 @@ public class ClientController {
 
     public void disconnectFromServer() {
         server.disconnectUser(this);
+        connected = false;
+        clientView.showMessage("You were disconnected from the server...\n");
     }
 
     public void answerFromServer(String message) {

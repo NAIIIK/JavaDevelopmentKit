@@ -41,7 +41,7 @@ public class ClientGUI extends JFrame implements ClientView{
     @Override
     public void disconnectedFromServer() {
         clientController.disconnectFromServer();
-        hideHeaderPanel(true);
+        headerPanel.setVisible(true);
     }
 
     @Override
@@ -49,10 +49,6 @@ public class ClientGUI extends JFrame implements ClientView{
         if (clientController.connectToServer(tfLogin.getText())) {
             headerPanel.setVisible(false);
         }
-    }
-
-    private void hideHeaderPanel(boolean visible) {
-        headerPanel.setVisible(visible);
     }
 
     private void message() {
