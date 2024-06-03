@@ -3,13 +3,13 @@ package ru.gb.seminar_1.HW;
 import ru.gb.seminar_1.HW.client.ClientController;
 import ru.gb.seminar_1.HW.client.ClientGUI;
 import ru.gb.seminar_1.HW.server.ServerController;
-import ru.gb.seminar_1.HW.server.ServerWindow;
+import ru.gb.seminar_1.HW.server.ServerGUI;
 
 public class Main {
     public static void main(String[] args) {
         ServerController server = new ServerController();
-        ServerWindow serverWindow = new ServerWindow(server);
-        server.setServerView(serverWindow);
+        ServerGUI serverGUI = new ServerGUI(server);
+        server.setServerView(serverGUI);
 
         ClientController clientController1 = new ClientController(server);
         ClientGUI clientGUI1 = new ClientGUI(clientController1);

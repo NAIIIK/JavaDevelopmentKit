@@ -67,10 +67,10 @@ public class ServerController {
     public void stop() {
         if (isOnline) {
             isOnline = false;
-            for (ClientController client : clients) {
-                client.disconnectFromServer();
-            }
             serverView.showOnLogs("Server stopped...\n");
+            while (!clients.isEmpty()) {
+                clients.getLast().disconnectFromServer();
+            }
         } else {
             serverView.showOnLogs("Server is not running...\n");
         }

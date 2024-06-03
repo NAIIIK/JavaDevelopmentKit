@@ -37,6 +37,7 @@ public class ClientController {
     public void disconnectFromServer() {
         server.disconnectUser(this);
         connected = false;
+        clientView.disconnectedFromServer();
         clientView.showMessage("You were disconnected from the server...\n");
     }
 

@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ServerWindow extends JFrame implements ServerView {
+public class ServerGUI extends JFrame implements ServerView {
     private static final int WIDTH = 640;
     private static final int HEIGHT = 480;
     private static final String TITLE = "Chat server";
@@ -20,7 +20,7 @@ public class ServerWindow extends JFrame implements ServerView {
     private JList<String> userList;
     private DefaultListModel<String> userListModel;
 
-    public ServerWindow(ServerController server) {
+    public ServerGUI(ServerController server) {
 
         this.server = server;
 

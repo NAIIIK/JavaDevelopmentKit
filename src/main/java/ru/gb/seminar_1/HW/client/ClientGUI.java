@@ -40,7 +40,6 @@ public class ClientGUI extends JFrame implements ClientView{
 
     @Override
     public void disconnectedFromServer() {
-        clientController.disconnectFromServer();
         headerPanel.setVisible(true);
     }
 
@@ -119,7 +118,7 @@ public class ClientGUI extends JFrame implements ClientView{
     protected void processWindowEvent(WindowEvent e) {
         super.processWindowEvent(e);
         if (e.getID() == WindowEvent.WINDOW_CLOSING) {
-            this.disconnectedFromServer();
+            clientController.disconnectFromServer();
         }
     }
 }
